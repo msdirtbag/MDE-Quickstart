@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MitigationPolicy>
+  <SystemConfig>
+    <ControlFlowGuard Enable="true" SuppressExports="false" StrictControlFlowGuard="false" />
+    <DEP Enable="true" EmulateAtlThunks="false" />
+    <ASLR ForceRelocateImages="true" RequireInfo="false" BottomUp="true" HighEntropy="true" />
+    <SEHOP Enable="true" TelemetryOnly="false" Audit="false" />
+    <Heap TerminateOnError="true" />
+    <StrictHandle Enable="true" />
+    <SystemCalls Audit="true" />
+    <ExtensionPoints DisableExtensionPoints="false" />
+    <Fonts DisableNonSystemFonts="true" AuditOnly="false" Audit="false" />
+    <Payload EnableExportAddressFilter="true" AuditEnableExportAddressFilter="true" EnableExportAddressFilterPlus="false" AuditEnableExportAddressFilterPlus="true" EnableImportAddressFilter="false" AuditEnableImportAddressFilter="true" EnableRopStackPivot="false" AuditEnableRopStackPivot="true" EnableRopCallerCheck="flase" AuditEnableRopCallerCheck="true" EnableRopSimExec="false" AuditEnableRopSimExec="true" />
+    <ChildProcess Audit="true" />
+    <ImageLoad BlockLowLabelImageLoads="false" AuditLowLabelImageLoads="true" BlockRemoteImageLoads="false" AuditRemoteImageLoads="true" AuditPreferSystem32="true" />
+    <DynamicCode Audit="true" />
+  </SystemConfig>
+  <AppConfig Executable="msedge.exe">
+    <DEP Enable="true" EmulateAtlThunks="false" />
+    <ASLR ForceRelocateImages="true" RequireInfo="true" BottomUp="true" HighEntropy="true" />
+    <StrictHandle Enable="true" />
+    <SystemCalls DisableWin32kSystemCalls="false" Audit="false" />
+    <ExtensionPoints DisableExtensionPoints="true" />
+  </AppConfig>
+  <AppConfig Executable="ONEDRIVE.EXE">
+    <DEP Enable="true" EmulateAtlThunks="false" />
+    <ImageLoad AuditImageLoad="false" PreferSystem32="false" BlockLowLabelImageLoads="false" BlockRemoteImageLoads="true" AuditLowLabelImageLoads="false" AuditRemoteImageLoads="false" />
+    <Payload EnableExportAddressFilter="true" EnableExportAddressFilterPlus="true" EnableImportAddressFilter="true" EnableRopStackPivot="true" EnableRopCallerCheck="true" EnableRopSimExec="true" />
+    <ChildProcess DisallowChildProcessCreation="false" Audit="false" />
+    <Fonts DisableNonSystemFonts="false" />
+    <DynamicCode BlockDynamicCode="false" />
+  </AppConfig>
+  <AppConfig Executable="Acrobat.exe">
+    <DEP Enable="true" EmulateAtlThunks="false" />
+    <ASLR ForceRelocateImages="true" RequireInfo="false" BottomUp="true" HighEntropy="false" />
+    <Payload EnableExportAddressFilter="true" EnableExportAddressFilterPlus="true" EnableImportAddressFilter="true" EnableRopStackPivot="true" EnableRopCallerCheck="true" EnableRopSimExec="true" />
+  </AppConfig>
+  <AppConfig Executable="AcroRd32.exe">
+    <DEP Enable="true" EmulateAtlThunks="false" />
+    <ASLR ForceRelocateImages="true" RequireInfo="false" BottomUp="true" HighEntropy="false" />
+    <Payload EnableExportAddressFilter="true" EnableExportAddressFilterPlus="true" EnableImportAddressFilter="true" EnableRopStackPivot="true" EnableRopCallerCheck="true" EnableRopSimExec="true" />
+  </AppConfig>
+  <AppConfig Executable="chrome.exe">
+    <DEP Enable="true" EmulateAtlThunks="false" />
+    <ASLR ForceRelocateImages="true" RequireInfo="true" BottomUp="true" HighEntropy="true" />
+    <StrictHandle Enable="true" />
+    <SystemCalls DisableWin32kSystemCalls="false" Audit="false" />
+    <ChildProcess DisallowChildProcessCreation="false" Audit="false" />
+    <ExtensionPoints DisableExtensionPoints="true" />
+    <DynamicCode BlockDynamicCode="false" AllowThreadsToOptOut="false" Audit="false" />
+  </AppConfig>
+  <AppConfig Executable="EXCEL.EXE">
+    <DEP Enable="true" EmulateAtlThunks="false" />
+    <Payload EnableExportAddressFilter="true" EnableExportAddressFilterPlus="true" EnableImportAddressFilter="true" EnableRopStackPivot="true" EnableRopCallerCheck="true" EnableRopSimExec="true" />
+  </AppConfig>
+  <AppConfig Executable="firefox.exe">
+    <DEP Enable="true" EmulateAtlThunks="false" />
+    <ASLR ForceRelocateImages="true" RequireInfo="false" BottomUp="true" HighEntropy="false" />
+    <Payload EnableExportAddressFilter="true" EnableExportAddressFilterPlus="true" EnableImportAddressFilter="true" EnableRopStackPivot="true" EnableRopCallerCheck="true" EnableRopSimExec="true" />
+  </AppConfig>
+  <AppConfig Executable="iexplore.exe">
+    <DEP Enable="true" EmulateAtlThunks="false" />
+    <ASLR ForceRelocateImages="true" RequireInfo="false" BottomUp="true" HighEntropy="true" />
+    <StrictHandle Enable="false" />
+    <SystemCalls DisableWin32kSystemCalls="false" Audit="false" />
+    <ExtensionPoints DisableExtensionPoints="false" />
+    <DynamicCode BlockDynamicCode="false" AllowThreadsToOptOut="false" Audit="false" />
+    <ControlFlowGuard Enable="true" SuppressExports="false" StrictControlFlowGuard="false" />
+    <Payload EAFModules="mshtml.dll;flash*.ocx;jscript*.dll;vbscript.dll;vgx.dll;" EnableExportAddressFilter="true" EnableExportAddressFilterPlus="true" EnableImportAddressFilter="true" EnableRopStackPivot="true" EnableRopCallerCheck="true" EnableRopSimExec="true" />
+  </AppConfig>
+  <AppConfig Executable="java.exe">
+    <ASLR ForceRelocateImages="true" BottomUp="true" HighEntropy="true" />
+    <DEP Enable="true" EmulateAtlThunks="false" />
+    <Payload EnableExportAddressFilter="true" EnableExportAddressFilterPlus="true" EnableImportAddressFilter="true" EnableRopStackPivot="true" EnableRopCallerCheck="true" EnableRopSimExec="true" />
+  </AppConfig>
+  <AppConfig Executable="javaw.exe">
+    <ASLR ForceRelocateImages="true" BottomUp="true" HighEntropy="true" />
+    <DEP Enable="true" EmulateAtlThunks="false" />
+    <Payload EnableExportAddressFilter="true" EnableExportAddressFilterPlus="true" EnableImportAddressFilter="true" EnableRopStackPivot="true" EnableRopCallerCheck="true" EnableRopSimExec="true" />
+  </AppConfig>
+  <AppConfig Executable="javaws.exe">
+    <ASLR ForceRelocateImages="true" BottomUp="true" HighEntropy="true" />
+    <DEP Enable="true" EmulateAtlThunks="false" />
+    <Payload EnableExportAddressFilter="true" EnableExportAddressFilterPlus="true" EnableImportAddressFilter="true" EnableRopStackPivot="true" EnableRopCallerCheck="true" EnableRopSimExec="true" />
+  </AppConfig>
+  <AppConfig Executable="OUTLOOK.EXE">
+    <DEP Enable="true" EmulateAtlThunks="false" />
+    <Payload EnableExportAddressFilter="true" EnableExportAddressFilterPlus="true" EnableImportAddressFilter="true" EnableRopStackPivot="true" EnableRopCallerCheck="true" EnableRopSimExec="true" />
+  </AppConfig>
+  <AppConfig Executable="plugin-container.exe">
+    <DEP Enable="true" EmulateAtlThunks="false" />
+    <Payload EnableExportAddressFilter="true" EnableExportAddressFilterPlus="true" EnableImportAddressFilter="true" EnableRopStackPivot="true" EnableRopCallerCheck="true" EnableRopSimExec="true" />
+  </AppConfig>
+  <AppConfig Executable="POWERPNT.EXE">
+    <DEP Enable="true" EmulateAtlThunks="false" />
+    <Payload EnableExportAddressFilter="true" EnableExportAddressFilterPlus="true" EnableImportAddressFilter="true" EnableRopStackPivot="true" EnableRopCallerCheck="true" EnableRopSimExec="true" />
+  </AppConfig>
+  <AppConfig Executable="VISIO.EXE">
+    <DEP Enable="true" EmulateAtlThunks="false" />
+    <Payload EnableExportAddressFilter="true" EnableExportAddressFilterPlus="true" EnableImportAddressFilter="true" EnableRopStackPivot="true" EnableRopCallerCheck="true" EnableRopSimExec="true" />
+  </AppConfig>
+  <AppConfig Executable="WINWORD.EXE">
+    <DEP Enable="true" EmulateAtlThunks="false" />
+    <Payload EnableExportAddressFilter="true" EnableExportAddressFilterPlus="true" EnableImportAddressFilter="true" EnableRopStackPivot="true" EnableRopCallerCheck="true" EnableRopSimExec="true" />
+  </AppConfig>
+  <AppConfig Executable="wordpad.exe">
+    <DEP Enable="true" EmulateAtlThunks="false" />
+    <Payload EnableExportAddressFilter="true" EnableExportAddressFilterPlus="true" EnableImportAddressFilter="true" EnableRopStackPivot="true" EnableRopCallerCheck="true" EnableRopSimExec="true" />
+  </AppConfig>
+  <AppConfig Executable="mshta.exe">
+    <ASLR ForceRelocateImages="true" RequireInfo="false" />
+  </AppConfig>
+  <AppConfig Executable="C:\Windows\System32\wininit.exe">
+    <DynamicCode BlockDynamicCode="true" AllowThreadsToOptOut="false" Audit="false" />
+  </AppConfig>
+  <AppConfig Executable="C:\Windows\System32\lsass.exe">
+    <ExtensionPoints DisableExtensionPoints="true" />
+    <ChildProcess DisallowChildProcessCreation="true" Audit="false" />
+    <DynamicCode BlockDynamicCode="true" AllowThreadsToOptOut="false" Audit="false" />
+    <SignedBinaries MicrosoftSignedOnly="true" AllowStoreSignedBinaries="false" Audit="false" AuditStoreSigned="false" />
+  </AppConfig>
+  <AppConfig Executable="C:\Windows\System32\winlogon.exe">
+    <DynamicCode BlockDynamicCode="true" AllowThreadsToOptOut="false" Audit="false" />
+    <SignedBinaries MicrosoftSignedOnly="false" AllowStoreSignedBinaries="false" Audit="false" AuditStoreSigned="false" />
+    <Fonts DisableNonSystemFonts="false" />
+  </AppConfig>
+  <AppConfig Executable="C:\Windows\System32\SecurityHealthService.exe">
+    <StrictHandle Enable="true" />
+    <DynamicCode BlockDynamicCode="true" AllowThreadsToOptOut="false" Audit="false" />
+  </AppConfig>
+  <AppConfig Executable="C:\Windows\System32\SgrmBroker.exe">
+    <SystemCalls DisableWin32kSystemCalls="true" Audit="false" />
+  </AppConfig>
+  <AppConfig Executable="C:\Windows\System32\wlanext.exe">
+    <StrictHandle Enable="true" />
+    <DynamicCode BlockDynamicCode="true" AllowThreadsToOptOut="false" Audit="false" />
+    <SignedBinaries MicrosoftSignedOnly="true" AllowStoreSignedBinaries="false" Audit="false" AuditStoreSigned="false" />
+  </AppConfig>
+  <AppConfig Executable="C:\Windows\System32\WUDFHost.exe">
+    <StrictHandle Enable="true" />
+    <DynamicCode BlockDynamicCode="true" AllowThreadsToOptOut="false" Audit="false" />
+  </AppConfig>
+  <AppConfig Executable="C:\Windows\System32\audiodg.exe">
+    <StrictHandle Enable="true" />
+    <ChildProcess DisallowChildProcessCreation="true" Audit="false" />
+  </AppConfig>
+  <AppConfig Executable="C:\Windows\System32\taskhostw.exe">
+    <SignedBinaries MicrosoftSignedOnly="false" AllowStoreSignedBinaries="false" Audit="false" AuditStoreSigned="false" />
+  </AppConfig>
+  <AppConfig Executable="C:\Windows\System32\sihost.exe">
+    <StrictHandle Enable="true" />
+    <SignedBinaries MicrosoftSignedOnly="true" AllowStoreSignedBinaries="false" Audit="false" AuditStoreSigned="false" />
+  </AppConfig>
+  <AppConfig Executable="C:\Windows\System32\AggregatorHost.exe">
+    <StrictHandle Enable="true" />
+    <DynamicCode BlockDynamicCode="true" AllowThreadsToOptOut="false" Audit="false" />
+    <SignedBinaries MicrosoftSignedOnly="true" AllowStoreSignedBinaries="false" Audit="false" AuditStoreSigned="false" />
+  </AppConfig>
+  <AppConfig Executable="C:\Windows\System32\csrss.exe">
+    <Fonts DisableNonSystemFonts="false" />
+  </AppConfig>
+  <AppConfig Executable="C:\Windows\System32\fontdrvhost.exe">
+    <DynamicCode BlockDynamicCode="true" AllowThreadsToOptOut="false" Audit="false" />
+    <SignedBinaries MicrosoftSignedOnly="true" AllowStoreSignedBinaries="false" Audit="false" AuditStoreSigned="false" />
+    <Fonts DisableNonSystemFonts="true" AuditOnly="false" Audit="false" />
+    <ChildProcess DisallowChildProcessCreation="true" Audit="false" />
+  </AppConfig>
+  <AppConfig Executable="C:\Windows\System32\SearchIndexer.exe">
+    <StrictHandle Enable="true" />
+    <DynamicCode BlockDynamicCode="true" AllowThreadsToOptOut="false" Audit="false" />
+    <SignedBinaries MicrosoftSignedOnly="true" AllowStoreSignedBinaries="false" Audit="false" AuditStoreSigned="false" />
+  </AppConfig>
+  <AppConfig Executable="C:\Windows\System32\SearchProtocolHost.exe">
+    <StrictHandle Enable="true" />
+    <DynamicCode BlockDynamicCode="false" AllowThreadsToOptOut="false" Audit="false" />
+    <SignedBinaries MicrosoftSignedOnly="true" AllowStoreSignedBinaries="false" Audit="false" AuditStoreSigned="false" />
+    <ChildProcess DisallowChildProcessCreation="true" Audit="false" />
+  </AppConfig>
+  <AppConfig Executable="C:\Windows\System32\SearchFilterHost.exe">
+    <StrictHandle Enable="true" />
+    <DynamicCode BlockDynamicCode="false" AllowThreadsToOptOut="false" Audit="false" />
+    <ChildProcess DisallowChildProcessCreation="true" Audit="false" />
+  </AppConfig>
+  <AppConfig Executable="C:\Windows\System32\ctfmon.exe">
+    <StrictHandle Enable="true" />
+    <DynamicCode BlockDynamicCode="true" AllowThreadsToOptOut="false" Audit="false" />
+    <SignedBinaries MicrosoftSignedOnly="true" AllowStoreSignedBinaries="false" Audit="false" AuditStoreSigned="false" />
+    <Fonts DisableNonSystemFonts="true" AuditOnly="false" Audit="false" />
+    <ChildProcess DisallowChildProcessCreation="true" Audit="false" />
+  </AppConfig>
+  <AppConfig Executable="C:\Windows\System32\spoolsv.exe">
+    <DynamicCode BlockDynamicCode="false" AllowThreadsToOptOut="false" Audit="false" />
+    <StrictHandle Enable="true" />
+    <SignedBinaries MicrosoftSignedOnly="false" AllowStoreSignedBinaries="false" Audit="true" AuditStoreSigned="false" />
+    <ChildProcess DisallowChildProcessCreation="false" Audit="true" />
+  </AppConfig>
+  <AppConfig Executable="C:\Windows\System32\svchost.exe">
+    <ASLR ForceRelocateImages="true" RequireInfo="false" BottomUp="true" HighEntropy="true" />
+    <ControlFlowGuard Enable="true" SuppressExports="true" StrictControlFlowGuard="true" />
+    <Fonts DisableNonSystemFonts="true" AuditOnly="false" Audit="false" />
+    <ExtensionPoints DisableExtensionPoints="true" />
+    <SignedBinaries MicrosoftSignedOnly="false" AllowStoreSignedBinaries="false" Audit="true" AuditStoreSigned="true" />
+    <DynamicCode Audit="false" />
+  </AppConfig>
+  <AppConfig Executable="C:\Windows\System32\dasHost.exe">
+    <StrictHandle Enable="true" />
+    <DynamicCode BlockDynamicCode="true" AllowThreadsToOptOut="false" Audit="false" />
+    <SignedBinaries MicrosoftSignedOnly="true" AllowStoreSignedBinaries="false" Audit="false" AuditStoreSigned="false" />
+  </AppConfig>
+  <AppConfig Executable="C:\Windows\System32\SecurityHealthSystray.exe">
+    <StrictHandle Enable="true" />
+    <DynamicCode BlockDynamicCode="true" AllowThreadsToOptOut="false" Audit="false" />
+  </AppConfig>
+  <AppConfig Executable="C:\Windows\System32\smartscreen.exe">
+    <StrictHandle Enable="true" />
+    <DynamicCode BlockDynamicCode="false" AllowThreadsToOptOut="false" Audit="false" />
+    <SignedBinaries MicrosoftSignedOnly="true" AllowStoreSignedBinaries="false" Audit="false" AuditStoreSigned="false" />
+  </AppConfig>
+  <AppConfig Executable="C:\Windows\explorer.exe">
+    <ASLR ForceRelocateImages="true" BottomUp="true" HighEntropy="true" />
+    <StrictHandle Enable="false" />
+    <Fonts DisableNonSystemFonts="true" AuditOnly="false" Audit="false" />
+  </AppConfig>
+  <AppConfig Executable="MpCmdRun.exe">
+    <SignedBinaries MicrosoftSignedOnly="false" AllowStoreSignedBinaries="false" Audit="true" AuditStoreSigned="true" />
+  </AppConfig>
+  <AppConfig Executable="MsMpEngCP.exe">
+    <SystemCalls DisableWin32kSystemCalls="false" Audit="false" />
+  </AppConfig>
+  <AppConfig Executable="NisSrv.exe">
+    <SignedBinaries MicrosoftSignedOnly="true" AllowStoreSignedBinaries="false" Audit="false" AuditStoreSigned="false" />
+  </AppConfig>
+  <AppConfig Executable="runtimebroker.exe">
+    <ExtensionPoints DisableExtensionPoints="true" />
+  </AppConfig>
+  <AppConfig Executable="rundll32.exe">
+    <ImageLoad BlockRemoteImageLoads="true" AuditRemoteImageLoads="false" BlockLowLabelImageLoads="true" AuditLowLabelImageLoads="false" />
+  </AppConfig>
+  <AppConfig Executable="Regsvr32.exe">
+    <ImageLoad BlockRemoteImageLoads="true" AuditRemoteImageLoads="false" BlockLowLabelImageLoads="true" AuditLowLabelImageLoads="false" />
+  </AppConfig>
+  <AppConfig Executable="ssh-agent.exe">
+    <ExtensionPoints DisableExtensionPoints="true" />
+    <StrictHandle Enable="true" />
+    <DynamicCode BlockDynamicCode="true" AllowThreadsToOptOut="false" Audit="false" />
+    <SignedBinaries MicrosoftSignedOnly="false" AllowStoreSignedBinaries="false" Audit="false" AuditStoreSigned="false" />
+  </AppConfig>
+  <AppConfig Executable="C:\Windows\System32\userinit.exe">
+    <Fonts DisableNonSystemFonts="false" AuditOnly="false" Audit="false" />
+  </AppConfig>
+  <AppConfig Executable="Code.exe">
+    <SystemCalls DisableWin32kSystemCalls="false" Audit="false" />
+  </AppConfig>
+  <AppConfig Executable="C:\Program Files\Dell\Dell Peripheral Manager\DPM.exe">
+    <Fonts DisableNonSystemFonts="false" AuditOnly="false" Audit="false" />
+  </AppConfig>
+  <AppConfig Executable="driverscloud.exe">
+    <Fonts DisableNonSystemFonts="false" AuditOnly="false" Audit="false" />
+  </AppConfig>
+  <AppConfig Executable="RstMwService.exe">
+    <StrictHandle Enable="false" />
+  </AppConfig>
+  <AppConfig Executable="HfcDisableService.exe">
+    <StrictHandle Enable="false" />
+  </AppConfig>
+  <AppConfig Executable="amdfendrsr.exe">
+    <StrictHandle Enable="false" />
+  </AppConfig>
+  <AppConfig Executable="SetupHost.exe">
+    <StrictHandle Enable="false" />
+  </AppConfig>
+</MitigationPolicy>

@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SiPolicy xmlns="urn:schemas-microsoft-com:sipolicy" PolicyType="Base Policy">
+  <VersionEx>1.0.1.1</VersionEx>
+  <PlatformID>{2E07F7E4-194C-4D20-00FF-6F44A6C5A234}</PlatformID>
+  <Rules>
+    <Rule>
+      <Option>Enabled:UMCI</Option>
+    </Rule>
+    <Rule>
+      <Option>Enabled:Audit Mode</Option>
+    </Rule>
+    <Rule>
+      <Option>Enabled:Unsigned System Integrity Policy</Option>
+    </Rule>
+    <Rule>
+      <Option>Enabled:Update Policy No Reboot</Option>
+    </Rule>
+  </Rules>
+  <!--EKUS-->
+  <EKUs />
+  <!--File Rules-->
+  <FileRules>
+    <Allow ID="ID_ALLOW_A_1_0" FriendlyName="" FileName="*" />
+    <Allow ID="ID_ALLOW_A_2_0" FriendlyName="" FileName="*" />
+    <Deny ID="ID_DENY_D_0_0_0" FriendlyName="OriginalFileName test" FileName="rundll32.exe" />
+    <Deny ID="ID_DENY_D_0_0_1" FriendlyName="RDP dll loaded" FileName="termsrv.dll" />
+    <Deny ID="ID_DENY_D_1_0_0" FriendlyName="VBA DLLs" FilePath="%OSDRIVE%\Program Files\Microsoft Office\root\vfs\ProgramFilesCommonX86\Microsoft Shared\VBA\*" />
+    <Deny ID="ID_DENY_D_1_0_1" FriendlyName="VBA DLLs" FilePath="%OSDRIVE%\Program Files\Microsoft Office\root\vfs\ProgramFilesCommonX64\Microsoft Shared\VBA\*" />
+    <Deny ID="ID_DENY_D_1_0_2" FriendlyName="PowerShell" FilePath="%OSDRIVE%\Windows\assembly\NativeImages*" />
+    <Deny ID="ID_DENY_D_1_0_3" FriendlyName="Squiblydoo" FileName="scrobj.dll" />
+    <Deny ID="ID_DENY_D_1_0_4" FriendlyName="AMSI loaded" FileName="amsi.dll" />
+    <Deny ID="ID_DENY_D_1_0_5" FriendlyName="AMSI loaded" FileName="amsiproxy.dll" />
+    <Deny ID="ID_DENY_D_1_0_6" FriendlyName="XLL loaded" FilePath="*.xll" />
+    <Deny ID="ID_DENY_D_1_0_7" FriendlyName="WLL Loaded" FilePath="*.wll" />
+    <Deny ID="ID_DENY_D_1_0_8" FriendlyName="Javascript loaded" FileName="jscript.dll" />
+    <Deny ID="ID_DENY_D_1_0_9" FriendlyName="Javascript loaded" FileName="jscript9.dll" />
+    <Deny ID="ID_DENY_D_1_1_0" FriendlyName="System driver loaded" FilePath="*.sys" />
+    <Deny ID="ID_DENY_D_1_1_1" FriendlyName="WMI ETW" FileName="EventTracingManagement.dll" />
+    <Deny ID="ID_DENY_D_1_1_2" FriendlyName="Removable Media" FilePath="%REMOVABLE%\*" />
+    <Deny ID="ID_DENY_D_1_1_3" FriendlyName="Removable storage device" FilePath="%HOT%\*" />
+    <Deny ID="ID_DENY_D_1_1_4" FriendlyName="Execution from Temp" FilePath="%OSDRIVE%\Windows\Temp*" />
+    <Deny ID="ID_DENY_D_1_1_5" FriendlyName="Execution from Temp" FilePath="%OSDRIVE%\Temp\*" />
+    <Deny ID="ID_DENY_D_1_1_6" FriendlyName="Execution from User Folder" FilePath="%OSDRIVE%\Users\*" />
+    <Deny ID="ID_DENY_D_1_1_7" FriendlyName="Compilation" FileName="Microsoft.Build.dll" />
+    <Deny ID="ID_DENY_D_1_1_8" FriendlyName="Compilation" FileName="Microsoft.Build.Framework.dll" />
+    <Deny ID="ID_DENY_D_1_1_9" FriendlyName="Compilation" FileName="msbuild.exe" />
+    <Deny ID="ID_DENY_D_1_2_0" FriendlyName="Compilation" FileName="dotnet.exe" />
+    <Deny ID="ID_DENY_D_1_2_1" FriendlyName="Compilation" FileName="aspnet_compiler.exe" />
+    <Deny ID="ID_DENY_D_1_2_2" FriendlyName="Compilation" FileName="csc.exe" />
+    <Deny ID="ID_DENY_D_1_2_3" FriendlyName="Compilation" FileName="Ilasm.exe" />
+    <Deny ID="ID_DENY_D_1_2_4" FriendlyName="Compilation" FileName="Jsc.exe" />
+    <Deny ID="ID_DENY_D_1_2_5" FriendlyName="Execution" FileName="Mshtml.dll" />
+    <Deny ID="ID_DENY_D_1_2_6" FriendlyName="Execution" FileName="VbsApi.dll" />
+    <Deny ID="ID_DENY_D_1_2_7" FriendlyName="Execution" FileName="Url.dll" />
+    <Deny ID="ID_DENY_D_1_2_8" FriendlyName="Execution" FileName="Shell32.dll" />
+    <Deny ID="ID_DENY_D_1_2_9" FriendlyName="Execution" FileName="Advpack.dll" />
+    <Deny ID="ID_DENY_D_1_3_0" FriendlyName="Execution" FileName="Shdocvw.dll" />
+    <Deny ID="ID_DENY_D_1_3_1" FriendlyName="Execution" FileName="zipfldr.dll" />
+    <Deny ID="ID_DENY_D_1_3_2" FriendlyName="Execution" FileName="wmiutils.dll" />
+    <Deny ID="ID_DENY_D_1_3_3" FriendlyName="Execution" FileName="system.management.automation.dll" />
+    <Deny ID="ID_DENY_D_1_3_4" FriendlyName="Execution" FileName="system.management.automation.ni.dll" />
+    <Deny ID="ID_DENY_D_1_3_5" FriendlyName="Execution" FileName="OUTLVBA.DLL" />
+    <Deny ID="ID_DENY_D_1_3_6" FriendlyName="Execution" FileName="cmstplua.dll" />
+    <Deny ID="ID_DENY_D_1_3_7" FriendlyName="Execution" FileName="colorui.dll" />
+    <Deny ID="ID_DENY_D_1_3_8" FriendlyName="Execution" FilePath="*\wscui.cpl" />
+    <Deny ID="ID_DENY_D_1_3_9" FriendlyName="Phantom Dlls" FilePath="*\controls.mui.dll" />
+    <Deny ID="ID_DENY_D_1_4_0" FriendlyName="Phantom Dlls" FilePath="*\mscorrc.dll.dll" />
+    <Deny ID="ID_DENY_D_1_4_1" FriendlyName="Phantom Dlls" FilePath="*\usoselfhost.dll" />
+    <Deny ID="ID_DENY_D_1_4_2" FriendlyName="Phantom Dlls" FilePath="*\api-ms-win-core-winrt-roparameterizediid-l1-1-0.dll" />
+    <Deny ID="ID_DENY_D_1_4_3" FriendlyName="Phantom Dlls" FilePath="*\cdpsgshims.dll" />
+    <Deny ID="ID_DENY_D_1_4_4" FriendlyName="Phantom Dlls" FilePath="*\windowscoredeviceinfo.dll" />
+    <Deny ID="ID_DENY_D_1_4_5" FriendlyName="Phantom Dlls" FilePath="*\edgegdi.dll" />
+    <Deny ID="ID_DENY_D_1_4_6" FriendlyName="Phantom Dlls" FilePath="*\Wlcsctrl.dll" />
+    <Deny ID="ID_DENY_D_1_4_7" FriendlyName="Phantom Dlls" FilePath="*\Msfte.dll" />
+    <Deny ID="ID_DENY_D_1_4_8" FriendlyName="Phantom Dlls" FilePath="*\api-ms-win-core-kernel32-legacy-l1.dll" />
+    <Deny ID="ID_DENY_D_1_4_9" FriendlyName="Phantom Dlls" FilePath="*\api-ms-win-core-winrt-l1-1-0.dll" />
+    <Deny ID="ID_DENY_D_1_5_0" FriendlyName="Phantom Dlls" FilePath="*\api-ms-win-core-winrt-string-l1-1-0.dll" />
+    <Deny ID="ID_DENY_D_1_5_1" FriendlyName="Phantom Dlls" FilePath="*\phoneinfo.dll" />
+    <Deny ID="ID_DENY_D_1_5_2" FriendlyName="Phantom Dlls" FilePath="*\wlbsctrl.dll" />
+    <Deny ID="ID_DENY_D_1_5_3" FriendlyName="Phantom Dlls" FilePath="*\TSMSISrv.dll" />
+    <Deny ID="ID_DENY_D_1_5_4" FriendlyName="Phantom Dlls" FilePath="*\TSVIPSrv.dll" />
+    <Deny ID="ID_DENY_D_1_5_5" FriendlyName="Phantom Dlls" FilePath="*\WptsExtensions.dll" />
+    <Deny ID="ID_DENY_D_1_5_6" FriendlyName="Phantom Dlls" FilePath="*\wow64log.dll" />
+    <Deny ID="ID_DENY_D_1_5_7" FriendlyName="Phantom Dlls" FilePath="*\diagtrack_win.dll" />
+    <Deny ID="ID_DENY_D_1_5_8" FriendlyName="Phantom Dlls" FilePath="*\diagtrack_wininternal.dll" />
+    <Deny ID="ID_DENY_D_1_5_9" FriendlyName="Unwanted Binaries" FilePath="*\LxssManager.dll" />
+    <Deny ID="ID_DENY_D_1_6_0" FriendlyName="Unwanted Binaries" FilePath="*kill.exe" />
+    <Deny ID="ID_DENY_D_1_6_1" FriendlyName="Unwanted Binaries" FileName="CompatTelRunner.exe" />
+    <Deny ID="ID_DENY_D_1_6_2" FriendlyName="Unwanted Binaries" FileName="regasm.exe" />
+    <Deny ID="ID_DENY_D_1_6_3" FriendlyName="Unwanted Binaries" FileName="wsl.exe" />
+    <Deny ID="ID_DENY_D_1_6_4" FriendlyName="Unwanted Binaries" FilePath="*\wslconfig.exe" />
+    <Deny ID="ID_DENY_D_1_6_5" FriendlyName="Unwanted Binaries" FilePath="*\wslhost.exe" />
+    <Deny ID="ID_DENY_D_1_6_6" FriendlyName="Unwanted Binaries" FilePath="*\windbg.exe" />
+    <Deny ID="ID_DENY_D_1_6_7" FriendlyName=".NET Binaries executed" FileName="clr.dll" />
+    <Deny ID="ID_DENY_D_1_6_8" FriendlyName=".NET Binaries executed" FileName="clrjit.dll" />
+    <Deny ID="ID_DENY_D_1_6_9" FriendlyName=".NET Binaries executed" FileName="mscoreei.dll" />
+    <Deny ID="ID_DENY_D_1_7_0" FriendlyName=".NET Binaries executed" FilePath="*\mscoree.dll" />
+    <Deny ID="ID_DENY_D_1_7_1" FriendlyName=".NET Binaries executed" FileName="mscoreeis.dll" />
+    <Deny ID="ID_DENY_D_1_7_2" FriendlyName=".NET Binaries executed" FileName="mscorlib.dll" />
+    <Deny ID="ID_DENY_D_1_7_3" FriendlyName="Unwanted Binaries" FileName="RegSvcs.exe" />
+    <Deny ID="ID_DENY_D_1_7_4" FriendlyName="Taskmanager" FileName="mstask.dll" />
+    <Deny ID="ID_DENY_D_1_7_5" FriendlyName="Script runner" FileName="scrrun.dll" />
+    <Deny ID="ID_DENY_D_1_7_6" FriendlyName="Script runner" FileName="vbscript.dll" />
+    <Deny ID="ID_DENY_D_1_7_7" FriendlyName="Component Object Model" FileName="comsvcs.dll" />
+    <Deny ID="ID_DENY_D_1_7_8" FriendlyName="Component Object Model" FileName="coml2.dll" />
+    <Deny ID="ID_DENY_D_1_7_9" FriendlyName="Component Object Model" FileName="combase.dll" />
+    <Deny ID="ID_DENY_D_1_8_0" FriendlyName="Registry Modification" FileName="regsvc.dll" />
+    <Deny ID="ID_DENY_D_1_8_1" FriendlyName="Possible DLL Sideloading" FilePath="%OSDRIVE%\programdata\*" />
+    <Deny ID="ID_DENY_D_1_8_2" FriendlyName="Possible DLL Sideloading" FilePath="%OSDRIVE%\Windows\Media\*" />
+    <Deny ID="ID_DENY_D_1_8_3" FriendlyName="Possible DLL Sideloading" FilePath="%OSDRIVE%\Windows\addins\*" />
+    <Deny ID="ID_DENY_D_1_8_4" FriendlyName="Possible DLL Sideloading" FilePath="%OSDRIVE%\Windows\system32\config\systemprofile\*" />
+    <Deny ID="ID_DENY_D_1_8_5" FriendlyName="Possible DLL Sideloading" FilePath="%OSDRIVE%\Windows\Debug\*" />
+    <Deny ID="ID_DENY_D_1_8_6" FriendlyName="Possible DLL Sideloading" FilePath="%OSDRIVE%\PerfLogs\*" />
+    <Deny ID="ID_DENY_D_1_8_7" FriendlyName="Possible DLL Sideloading" FilePath="%OSDRIVE%\Windows\Help\*" />
+    <Deny ID="ID_DENY_D_1_8_8" FriendlyName="Possible DLL Sideloading" FilePath="%OSDRIVE%\Windows\repair\*" />
+    <Deny ID="ID_DENY_D_1_8_9" FriendlyName="Possible DLL Sideloading" FilePath="%OSDRIVE%\Windows\security\*" />
+    <Deny ID="ID_DENY_D_1_9_0" FriendlyName="Possible DLL Sideloading" FilePath="%OSDRIVE%\Windows\Fonts\*" />
+    <Deny ID="ID_DENY_D_1_9_1" FriendlyName="Possible DLL Sideloading" FilePath="%OSDRIVE%\$Recycle.bin\*" />
+    <Deny ID="ID_DENY_D_1_9_2" FriendlyName="csharp" FileName="Microsoft.CSharp.dll" />
+    <Deny ID="ID_DENY_D_1_9_3" FriendlyName="Winsock" FileName="mswsock.dll" />
+    <Deny ID="ID_DENY_D_1_9_4" FriendlyName="Potential downloads" FileName="urlmon.dll" />
+    <Deny ID="ID_DENY_D_1_9_5" FriendlyName="" FileName="ntdll.dll" />
+    <Deny ID="ID_DENY_D_1_9_6" FriendlyName="" FileName="kernel32.dll" />
+    <Deny ID="ID_DENY_D_1_9_7" FriendlyName="" FileName="KernelBase.dll" />
+    <Deny ID="ID_DENY_D_1_9_8" FriendlyName="" FileName="dllhost.exe" />
+    <Deny ID="ID_DENY_D_1_9_9" FriendlyName="curl dll" FileName="libcurl.dll" />
+    <Deny ID="ID_DENY_D_2_0_0" FriendlyName="SSH client" FileName="ssh.exe" />
+    <Deny ID="ID_DENY_D_2_0_1" FriendlyName="SSH Daemon" FileName="sshd.exe" />
+    <Deny ID="ID_DENY_D_2_0_2" FriendlyName="" FileName="DotNetTools.dll" />
+    <Deny ID="ID_DENY_D_2_0_3" FriendlyName="GPO Editor" FileName="LGPO.exe" />
+    <Deny ID="ID_DENY_D_2_0_4" FriendlyName="Python" FileName="py.exe" />
+    <Deny ID="ID_DENY_D_2_0_5" FriendlyName="AdExplorer" FileName="AdExp" />
+    <Deny ID="ID_DENY_D_2_0_6" FriendlyName="PsExec" FileName="psexec.c" />
+    <Deny ID="ID_DENY_D_2_0_7" FriendlyName="AADinternals" FileName="BouncyCastle.Crypto.dll" />
+    <Deny ID="ID_DENY_D_2_0_8" FriendlyName="AADinternals" FileName="PTASpy.dll" />
+    <Deny ID="ID_DENY_D_2_0_9" FriendlyName="AADinternals" FileName="Win32Ntv.dll" />
+    <Deny ID="ID_DENY_D_2_1_0" FriendlyName="AADinternals" FileName="DSInternals.Replication.dll" />
+    <Deny ID="ID_DENY_D_2_1_1" FriendlyName="AADinternals" FileName="DSInternals.Replication.Interop.dll" />
+    <Deny ID="ID_DENY_D_2_1_2" FriendlyName="AADinternals" FileName="DSInternals.Replication.Model.dll" />
+    <Deny ID="ID_DENY_D_2_1_3" FriendlyName="AADinternals" FileName="NDceRpc.Microsoft.dll" />
+    <Deny ID="ID_DENY_D_2_1_4" FriendlyName="Load from mounted image" FilePath="\device\CdRom*" />
+    <Deny ID="ID_DENY_D_2_1_5" FriendlyName="Task Scheduler" FileName="at.exe" />
+    <Deny ID="ID_DENY_D_2_1_6" FriendlyName="Putty" FileName="putty.exe*" />
+    <Deny ID="ID_DENY_D_2_1_7" FriendlyName="Certutil" FileName="certutil.exe*" />
+    <Deny ID="ID_DENY_D_2_1_8" FriendlyName="Syncro" FileName="SyncroLive.Agent.Runner.exe*" />
+    <Deny ID="ID_DENY_D_2_1_9" FriendlyName="Screenconnect" FileName="ScreenConnect.WindowsClient.exe*" />
+  </FileRules>
+  <!--Signers-->
+  <Signers />
+  <!--Driver Signing Scenarios-->
+  <SigningScenarios>
+    <SigningScenario Value="131" ID="ID_SIGNINGSCENARIO_DRIVERS_1" FriendlyName="Auto generated policy on 06-15-2022">
+      <ProductSigners>
+        <FileRulesRef>
+          <FileRuleRef RuleID="ID_ALLOW_A_1_0" />
+        </FileRulesRef>
+      </ProductSigners>
+    </SigningScenario>
+    <SigningScenario Value="12" ID="ID_SIGNINGSCENARIO_WINDOWS" FriendlyName="Auto generated policy on 06-15-2022">
+      <ProductSigners>
+        <FileRulesRef>
+          <FileRuleRef RuleID="ID_ALLOW_A_2_0" />
+          <FileRuleRef RuleID="ID_DENY_D_0_0_0" />
+          <FileRuleRef RuleID="ID_DENY_D_0_0_1" />
+          <FileRuleRef RuleID="ID_DENY_D_1_0_0" />
+          <FileRuleRef RuleID="ID_DENY_D_1_0_1" />
+          <FileRuleRef RuleID="ID_DENY_D_1_0_2" />
+          <FileRuleRef RuleID="ID_DENY_D_1_0_3" />
+          <FileRuleRef RuleID="ID_DENY_D_1_0_4" />
+          <FileRuleRef RuleID="ID_DENY_D_1_0_5" />
+          <FileRuleRef RuleID="ID_DENY_D_1_0_6" />
+          <FileRuleRef RuleID="ID_DENY_D_1_0_7" />
+          <FileRuleRef RuleID="ID_DENY_D_1_0_8" />
+          <FileRuleRef RuleID="ID_DENY_D_1_0_9" />
+          <FileRuleRef RuleID="ID_DENY_D_1_1_0" />
+          <FileRuleRef RuleID="ID_DENY_D_1_1_1" />
+          <FileRuleRef RuleID="ID_DENY_D_1_1_2" />
+          <FileRuleRef RuleID="ID_DENY_D_1_1_3" />
+          <FileRuleRef RuleID="ID_DENY_D_1_1_4" />
+          <FileRuleRef RuleID="ID_DENY_D_1_1_5" />
+          <FileRuleRef RuleID="ID_DENY_D_1_1_6" />
+          <FileRuleRef RuleID="ID_DENY_D_1_1_7" />
+          <FileRuleRef RuleID="ID_DENY_D_1_1_8" />
+          <FileRuleRef RuleID="ID_DENY_D_1_1_9" />
+          <FileRuleRef RuleID="ID_DENY_D_1_2_0" />
+          <FileRuleRef RuleID="ID_DENY_D_1_2_0" />
+          <FileRuleRef RuleID="ID_DENY_D_1_2_1" />
+          <FileRuleRef RuleID="ID_DENY_D_1_2_2" />
+          <FileRuleRef RuleID="ID_DENY_D_1_2_3" />
+          <FileRuleRef RuleID="ID_DENY_D_1_2_4" />
+          <FileRuleRef RuleID="ID_DENY_D_1_2_5" />
+          <FileRuleRef RuleID="ID_DENY_D_1_2_6" />
+          <FileRuleRef RuleID="ID_DENY_D_1_2_7" />
+          <FileRuleRef RuleID="ID_DENY_D_1_2_8" />
+          <FileRuleRef RuleID="ID_DENY_D_1_2_9" />
+          <FileRuleRef RuleID="ID_DENY_D_1_3_0" />
+          <FileRuleRef RuleID="ID_DENY_D_1_3_0" />
+          <FileRuleRef RuleID="ID_DENY_D_1_3_1" />
+          <FileRuleRef RuleID="ID_DENY_D_1_3_2" />
+          <FileRuleRef RuleID="ID_DENY_D_1_3_3" />
+          <FileRuleRef RuleID="ID_DENY_D_1_3_4" />
+          <FileRuleRef RuleID="ID_DENY_D_1_3_5" />
+          <FileRuleRef RuleID="ID_DENY_D_1_3_6" />
+          <FileRuleRef RuleID="ID_DENY_D_1_3_7" />
+          <FileRuleRef RuleID="ID_DENY_D_1_3_8" />
+          <FileRuleRef RuleID="ID_DENY_D_1_3_9" />
+          <FileRuleRef RuleID="ID_DENY_D_1_4_0" />
+          <FileRuleRef RuleID="ID_DENY_D_1_4_0" />
+          <FileRuleRef RuleID="ID_DENY_D_1_4_1" />
+          <FileRuleRef RuleID="ID_DENY_D_1_4_2" />
+          <FileRuleRef RuleID="ID_DENY_D_1_4_3" />
+          <FileRuleRef RuleID="ID_DENY_D_1_4_4" />
+          <FileRuleRef RuleID="ID_DENY_D_1_4_5" />
+          <FileRuleRef RuleID="ID_DENY_D_1_4_6" />
+          <FileRuleRef RuleID="ID_DENY_D_1_4_7" />
+          <FileRuleRef RuleID="ID_DENY_D_1_4_8" />
+          <FileRuleRef RuleID="ID_DENY_D_1_4_9" />
+          <FileRuleRef RuleID="ID_DENY_D_1_5_0" />
+          <FileRuleRef RuleID="ID_DENY_D_1_5_0" />
+          <FileRuleRef RuleID="ID_DENY_D_1_5_1" />
+          <FileRuleRef RuleID="ID_DENY_D_1_5_2" />
+          <FileRuleRef RuleID="ID_DENY_D_1_5_3" />
+          <FileRuleRef RuleID="ID_DENY_D_1_5_4" />
+          <FileRuleRef RuleID="ID_DENY_D_1_5_5" />
+          <FileRuleRef RuleID="ID_DENY_D_1_5_6" />
+          <FileRuleRef RuleID="ID_DENY_D_1_5_7" />
+          <FileRuleRef RuleID="ID_DENY_D_1_5_8" />
+          <FileRuleRef RuleID="ID_DENY_D_1_5_9" />
+          <FileRuleRef RuleID="ID_DENY_D_1_6_0" />
+          <FileRuleRef RuleID="ID_DENY_D_1_6_1" />
+          <FileRuleRef RuleID="ID_DENY_D_1_6_2" />
+          <FileRuleRef RuleID="ID_DENY_D_1_6_3" />
+          <FileRuleRef RuleID="ID_DENY_D_1_6_4" />
+          <FileRuleRef RuleID="ID_DENY_D_1_6_5" />
+          <FileRuleRef RuleID="ID_DENY_D_1_6_6" />
+          <FileRuleRef RuleID="ID_DENY_D_1_6_7" />
+          <FileRuleRef RuleID="ID_DENY_D_1_6_8" />
+          <FileRuleRef RuleID="ID_DENY_D_1_6_9" />
+          <FileRuleRef RuleID="ID_DENY_D_1_7_0" />
+          <FileRuleRef RuleID="ID_DENY_D_1_7_1" />
+          <FileRuleRef RuleID="ID_DENY_D_1_7_2" />
+          <FileRuleRef RuleID="ID_DENY_D_1_7_3" />
+          <FileRuleRef RuleID="ID_DENY_D_1_7_4" />
+          <FileRuleRef RuleID="ID_DENY_D_1_7_5" />
+          <FileRuleRef RuleID="ID_DENY_D_1_7_6" />
+          <FileRuleRef RuleID="ID_DENY_D_1_7_7" />
+          <FileRuleRef RuleID="ID_DENY_D_1_7_8" />
+          <FileRuleRef RuleID="ID_DENY_D_1_7_9" />
+          <FileRuleRef RuleID="ID_DENY_D_1_8_0" />
+          <FileRuleRef RuleID="ID_DENY_D_1_8_1" />
+          <FileRuleRef RuleID="ID_DENY_D_1_8_2" />
+          <FileRuleRef RuleID="ID_DENY_D_1_8_3" />
+          <FileRuleRef RuleID="ID_DENY_D_1_8_4" />
+          <FileRuleRef RuleID="ID_DENY_D_1_8_5" />
+          <FileRuleRef RuleID="ID_DENY_D_1_8_6" />
+          <FileRuleRef RuleID="ID_DENY_D_1_8_7" />
+          <FileRuleRef RuleID="ID_DENY_D_1_8_8" />
+          <FileRuleRef RuleID="ID_DENY_D_1_8_9" />
+          <FileRuleRef RuleID="ID_DENY_D_1_9_0" />
+          <FileRuleRef RuleID="ID_DENY_D_1_9_1" />
+          <FileRuleRef RuleID="ID_DENY_D_1_9_2" />
+          <FileRuleRef RuleID="ID_DENY_D_1_9_3" />
+          <FileRuleRef RuleID="ID_DENY_D_1_9_4" />
+          <FileRuleRef RuleID="ID_DENY_D_1_9_5" />
+          <FileRuleRef RuleID="ID_DENY_D_1_9_6" />
+          <FileRuleRef RuleID="ID_DENY_D_1_9_7" />
+          <FileRuleRef RuleID="ID_DENY_D_1_9_8" />
+          <FileRuleRef RuleID="ID_DENY_D_1_9_9" />
+          <FileRuleRef RuleID="ID_DENY_D_2_0_0" />
+          <FileRuleRef RuleID="ID_DENY_D_2_0_1" />
+          <FileRuleRef RuleID="ID_DENY_D_2_0_2" />
+          <FileRuleRef RuleID="ID_DENY_D_2_0_3" />
+          <FileRuleRef RuleID="ID_DENY_D_2_0_4" />
+          <FileRuleRef RuleID="ID_DENY_D_2_0_5" />
+          <FileRuleRef RuleID="ID_DENY_D_2_0_6" />
+          <FileRuleRef RuleID="ID_DENY_D_2_0_7" />
+          <FileRuleRef RuleID="ID_DENY_D_2_0_8" />
+          <FileRuleRef RuleID="ID_DENY_D_2_0_9" />
+          <FileRuleRef RuleID="ID_DENY_D_2_1_0" />
+          <FileRuleRef RuleID="ID_DENY_D_2_1_1" />
+          <FileRuleRef RuleID="ID_DENY_D_2_1_2" />
+          <FileRuleRef RuleID="ID_DENY_D_2_1_3" />
+          <FileRuleRef RuleID="ID_DENY_D_2_1_4" />
+          <FileRuleRef RuleID="ID_DENY_D_2_1_5" />
+          <FileRuleRef RuleID="ID_DENY_D_2_1_6" />
+          <FileRuleRef RuleID="ID_DENY_D_2_1_7" />
+          <FileRuleRef RuleID="ID_DENY_D_2_1_8" />
+          <FileRuleRef RuleID="ID_DENY_D_2_1_9" />
+        </FileRulesRef>
+      </ProductSigners>
+    </SigningScenario>
+  </SigningScenarios>
+  <UpdatePolicySigners />
+  <CiSigners />
+  <HvciOptions>0</HvciOptions>
+  <BasePolicyID>{A244370E-44C9-4C06-00FF-F6016E563076}</BasePolicyID>
+  <PolicyID>{A244370E-44C9-4C06-00FF-F6016E563076}</PolicyID>
+  <Settings>
+    <Setting Provider="PolicyInfo" Key="Information" ValueName="Name">
+      <Value>
+        <String>WDACauditmax</String>
+      </Value>
+    </Setting>
+    <Setting Provider="PolicyInfo" Key="Information" ValueName="Id">
+      <Value>
+        <String>0x42</String>
+      </Value>
+    </Setting>
+  </Settings>
+</SiPolicy>
